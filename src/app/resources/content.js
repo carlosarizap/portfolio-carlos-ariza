@@ -1,19 +1,19 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Carlos",
+  lastName: "Ariza",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Ingeniero Civil Informático",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "America/Santiago", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Español", "Inglés"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/carlosarizap",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/carlosarizap/",
   },
   {
     name: "X",
@@ -44,27 +44,28 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:carlosariza7459@gmail.com",
   },
 ];
 
 const home = {
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  label: "Inicio",
+  title: "Portafolio de Carlos Ariza",
+  description: "Sitio web de portafolio mostrando mi trabajo como Ingeniero Civil Informático",
+  headline: <>Ingeniero Civil Informático y Desarrollador</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      ¡Hola! Soy Carlos Ariza, un Ingeniero Civil Informático especializado en el desarrollo de aplicaciones
+      web y móviles. Trabajo con tecnologías como <InlineCode>React.js</InlineCode>, <InlineCode>Next.js</InlineCode>, <InlineCode>.NET</InlineCode> y más...
     </>
   ),
 };
 
+
 const about = {
-  label: "About",
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Sobre mí",
+  title: "Acerca de mí",
+  description: `Conoce a ${person.name}, ${person.role} en ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -73,113 +74,281 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introducción",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        👋 ¡Hola! Soy Carlos Ariza, un Ingeniero Civil Informático apasionado por el desarrollo Full Stack, con un enfoque en Frontend.
+        <br />
+        ✨ Construyo interfaces dinámicas y fluidas con React, Next.js y TypeScript, y desarrollo APIs robustas en .NET y Node.js, optimizando bases de datos con PostgreSQL y MongoDB.
+        <br />
+        🚀 Siempre en busca de nuevas tecnologías para crear experiencias web rápidas, escalables y centradas en el usuario.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiencia Laboral",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Sigue Seguro Corredores",
+        timeframe: "Agosto 2024 - Presente",
+        role: "Desarrollador Fullstack",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Implementé mejoras en el sistema de cotización de seguros utilizando <InlineCode>Next.js</InlineCode> y <InlineCode>React</InlineCode>, optimizando la velocidad y usabilidad de la plataforma.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Integré nuevas aseguradoras como <InlineCode>Mapfre</InlineCode> y <InlineCode>BCI</InlineCode>, ampliando la oferta de seguros en línea.
+          </>,
+          <>
+            Diseñé informes personalizados con visualización de datos en tiempo real, mejorando la toma de decisiones de los usuarios.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
+            src: "/images/projects/sigueseguro/sigue1.png",
+            alt: "Sistema de Cotización de Seguros",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/sigueseguro/sigue2.png",
+            alt: "Sistema de Cotización de Seguros",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/sigueseguro/sigue3.png",
+            alt: "Sistema de Cotización de Seguros",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/sigueseguro/sigue4.png",
+            alt: "Sistema de Cotización de Seguros",
+            width: 20,
             height: 9,
           },
         ],
       },
+
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "RockBlast",
+        timeframe: "Agosto 2024 - Diciembre 2024",
+        role: "Desarrollador Frontend",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Desarrollé la interfaz de usuario del dashboard de monitoreo hidrogeológico utilizando <InlineCode>React</InlineCode> y <InlineCode>Next.js</InlineCode>.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Implementé la integración de mapas interactivos con <InlineCode>Mapbox</InlineCode> para visualizar sensores y datos en tiempo real.
+          </>,
+          <>
+            Optimicé la visualización de datos con <InlineCode>Charts.js</InlineCode> y <InlineCode>Recharts</InlineCode>, mejorando la experiencia del usuario en la toma de decisiones.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/rockblast/rock1.png",
+            alt: "Dashboard de Monitoreo Hidrogeológico",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/rockblast/rock2.png",
+            alt: "Dashboard de Monitoreo Hidrogeológico",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/rockblast/rock3.png",
+            alt: "Dashboard de Monitoreo Hidrogeológico",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/rockblast/rock4.png",
+            alt: "Dashboard de Monitoreo Hidrogeológico",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/rockblast/rock5.png",
+            alt: "Dashboard de Monitoreo Hidrogeológico",
+            width: 20,
+            height: 9,
+          },
+          {
+            src: "/images/projects/rockblast/rock6.png",
+            alt: "Dashboard de Monitoreo Hidrogeológico",
+            width: 20,
+            height: 9,
+          },
+
+        ],
+      },
+      {
+        company: "Oppa",
+        timeframe: "Enero 2023 - Diciembre 2023",
+        role: "Desarrollador Mobile y Fullstack",
+        achievements: [
+          <>
+            Rediseñé y desarrollé desde cero la aplicación móvil de Oppa en <InlineCode>Xamarin/.NET C#</InlineCode>, priorizando la estabilidad y la experiencia de usuario.
+          </>,
+          <>
+            Implementé una nueva base de datos en <InlineCode>MongoDB</InlineCode> optimizando el almacenamiento y recuperación de datos.
+          </>,
+          <>
+            Creé la plataforma de administración web con <InlineCode>React</InlineCode> y <InlineCode>MongoDB</InlineCode>, facilitando la gestión de servicios y usuarios.
+          </>,
+        ],
+        images: [
+          {
+            src: "/images/projects/oppa/oppa1.png",
+            alt: "App Móvil de Oppa",
+            width: 9,
+            height: 16,
+          },
+          {
+            src: "/images/projects/oppa/oppa2.png",
+            alt: "App Móvil de Oppa",
+            width: 9,
+            height: 16,
+          },
+          {
+            src: "/images/projects/oppa/oppa3.png",
+            alt: "App Móvil de Oppa",
+            width: 9,
+            height: 16,
+          },
+          {
+            src: "/images/projects/oppa/oppa4.png",
+            alt: "App Móvil de Oppa",
+            width: 9,
+            height: 16,
+          },
+        ],
       },
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Educación",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universidad San Sebastián (2020-2024)",
+        description: (
+          <>
+            Titulado como <InlineCode>Ingeniero Civil Informático</InlineCode>, con un promedio
+            general de <InlineCode>6.5</InlineCode>. Destacado por excelencia académica con becas en
+            <InlineCode>2023</InlineCode> y <InlineCode>2024</InlineCode>.
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Experiencia Académica",
+        description: (
+          <>
+            • Ayudante en Ecuaciones Diferenciales (2022).
+            <br/>• Scrum Master en Introducción a la Ingeniería Informática (2023).
+            <br/>• Ayudante en Programación Orientada a Objetos (2024).
+            <br/>• Participación en proyectos de desarrollo y modelado de sistemas informáticos.
+          </>
+        ),
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Habilidades Técnicas",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "React & Next.js",
+        description: (
+          <>
+            Desarrollo de aplicaciones modernas con <InlineCode>React</InlineCode> y <InlineCode>Next.js</InlineCode>. 
+            Implementación de UI dinámicas y optimización de rendimiento con SSR y CSR.
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/logos/react.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 5.5,
+            height: 5,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/logos/next-js.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 5,
+            height: 5,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Node.js & .NET",
+        description: (
+          <>
+            Creación de APIs robustas con <InlineCode>Node.js</InlineCode> y <InlineCode>.NET</InlineCode>. 
+            Especializado en integración de bases de datos y optimización de endpoints.
+          </>
+        ),
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/logos/node-js.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 5,
+            height: 5,
+          },{
+            src: "/images/logos/net.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Bases de Datos (PostgreSQL & MongoDB)",
+        description: (
+          <>
+            Diseño y gestión de bases de datos SQL y NoSQL, optimizando consultas y estructuras en 
+            <InlineCode>PostgreSQL</InlineCode> y <InlineCode>MongoDB</InlineCode>.
+          </>
+        ),
+        images: [
+          {
+            src: "/images/logos/postgre.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 5,
+            height: 5,
+          },
+          {
+            src: "/images/logos/mongo.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Xamarin & Desarrollo Móvil",
+        description: (
+          <>
+            Desarrollo de aplicaciones móviles con <InlineCode>Xamarin</InlineCode> y <InlineCode>.NET C#</InlineCode>, 
+            optimizando rendimiento y experiencia de usuario.
+          </>
+        ),
+        images: [
+          {
+            src: "/images/logos/xam.png",
+            alt: "Dashboard desarrollado con React & Next.js",
+            width: 12,
+            height: 5,
           },
         ],
       },

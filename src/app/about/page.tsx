@@ -14,6 +14,8 @@ import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
+import { FaPhone } from "react-icons/fa6";
+import { HiPhone } from "react-icons/hi2";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -115,10 +117,22 @@ export default function About() {
             horizontal="center"
           >
             <Avatar src={person.avatar} size="xl" />
+
+            {/* Location Section */}
             <Flex gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
             </Flex>
+
+            {/* Phone Number Section */}
+            <Flex gap="8" vertical="center">
+              <HiPhone color="#049ce4" />
+              <a href={`tel:+56912345678`} style={{ textDecoration: "none", color: "inherit" }}>
+                +56 9 6509 5143
+              </a>
+            </Flex>
+
+            {/* Language Section */}
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
                 {person.languages.map((language, index) => (
@@ -130,6 +144,7 @@ export default function About() {
             )}
           </Column>
         )}
+
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
             id={about.intro.title}
@@ -178,25 +193,25 @@ export default function About() {
                 {social.map(
                   (item) =>
                     item.link && (
-                        <>
-                            <Button
-                                className="s-flex-hide"
-                                key={item.name}
-                                href={item.link}
-                                prefixIcon={item.icon}
-                                label={item.name}
-                                size="s"
-                                variant="secondary"
-                            />
-                            <IconButton
-                                className="s-flex-show"
-                                size="l"
-                                key={`${item.name}-icon`}
-                                href={item.link}
-                                icon={item.icon}
-                                variant="secondary"
-                            />
-                        </>
+                      <>
+                        <Button
+                          className="s-flex-hide"
+                          key={item.name}
+                          href={item.link}
+                          prefixIcon={item.icon}
+                          label={item.name}
+                          size="s"
+                          variant="secondary"
+                        />
+                        <IconButton
+                          className="s-flex-show"
+                          size="l"
+                          key={`${item.name}-icon`}
+                          href={item.link}
+                          icon={item.icon}
+                          variant="secondary"
+                        />
+                      </>
                     ),
                 )}
               </Flex>
@@ -240,31 +255,37 @@ export default function About() {
                       ))}
                     </Column>
                     {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
+                      <Flex fillWidth paddingTop="m" paddingLeft="40">
+                        <div style={{
+                          display: "flex",
+                          overflowX: "auto",
+                          gap: "10px",
+                          paddingBottom: "10px",
+                          scrollbarWidth: "thin",
+                          scrollbarColor: "#ccc transparent"
+                        }}>
+                          {experience.images.map((image, index) => (
+                            <div
+                              key={index}
+                              style={{
+                                flex: "0 0 auto",
+                                minWidth: `${image.width}em`,
+                                height: `${image.height}em`
+                              }}
+                            >
+                              <SmartImage
+                                enlarge
+                                radius="m"
+                                sizes={image.width.toString()}
+                                alt={image.alt}
+                                src={image.src}
+                              />
+                            </div>
+                          ))}
+                        </div>
                       </Flex>
                     )}
+
                   </Column>
                 ))}
               </Column>
@@ -287,7 +308,19 @@ export default function About() {
                     </Text>
                   </Column>
                 ))}
+                <SmartImage
+                  enlarge
+                  radius="m"
+                  //@ts-ignore
+                  //@ts-ignore
+                  height={20}
+                  width={24}
+                  alt={"a"}
+                  //@ts-ignore
+                  src={"/images/uss.png"}
+                />
               </Column>
+
             </>
           )}
 
@@ -313,7 +346,7 @@ export default function About() {
                         {skill.images.map((image, index) => (
                           <Flex
                             key={index}
-                            border="neutral-medium"
+
                             radius="m"
                             //@ts-ignore
                             minWidth={image.width}
