@@ -87,21 +87,35 @@ const Carousel: React.FC<CarouselProps> = ({
         aspectRatio={aspectRatio}
         speed="fast"
       >
-        <SmartImage
-          sizes={sizes}
-          priority
-          radius="l"
-          border="neutral-alpha-weak"
-          alt={images[activeIndex]?.alt}
-          aspectRatio={aspectRatio}
-          src={images[activeIndex]?.src}
+        <div
           style={{
-            ...(images.length > 1 && {
-              cursor: "pointer",
-            }),
+            position: "relative",
+            width: "100vw", // Expands to full viewport width
+            maxWidth: "1200px", // Prevents images from getting too large
+            margin: "0 auto", // Centers the content
+            aspectRatio: aspectRatio, // Keeps aspect ratio intact
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "hidden",
           }}
-        />
+        >
+          <SmartImage
+            sizes={sizes}
+            priority
+            radius="l"
+            border="neutral-alpha-weak"
+            alt={images[activeIndex]?.alt}
+            src={images[activeIndex]?.src}
+            style={{
+              width: "100%", // Ensures full width usage
+              height: "82%", // Adjusts dynamically
+              objectFit: "contain", // Prevents cropping or stretching
+            }}
+          />
+        </div>
       </RevealFx>
+
       {images.length > 1 && (
         <>
           {indicator === "line" ? (
