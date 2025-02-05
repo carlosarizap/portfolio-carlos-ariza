@@ -31,20 +31,18 @@ git clone https://github.com/carlosarizap/mi-portafolio.git
 cd mi-portafolio
 ---
 ## 2️⃣ Instalar Dependencias
-sh
-Copiar
-Editar
+
+
 npm install
 ---
 ## 3️⃣ Ejecutar en Desarrollo
-sh
-Copiar
-Editar
+
+
 npm run dev
 Luego, abre http://localhost:3000 en tu navegador para ver el portafolio en acción.
 ---
 ## 4️⃣ Compilar para Producción
-sh
-Copiar
-Editar
+npm run build
+npm start
+
 
