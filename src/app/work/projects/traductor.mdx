@@ -1,0 +1,44 @@
+---
+title: "Traductor de Lenguaje de Señas a Texto con IA"
+publishedAt: "2021-12-20"
+summary: "Desarrollo de un sistema de traducción de lenguaje de señas a texto en tiempo real mediante visión por computadora y aprendizaje automático con TensorFlow y OpenCV."
+
+images:
+  - "/images/projects/traductor/tensor.mp4"
+
+team:
+  - name: "Carlos Ariza"
+    role: "Desarrollador Fullstack"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/carlosariza"
+---
+
+## **Descripción General**
+
+Este proyecto busca **facilitar la comunicación entre personas sordas y oyentes** mediante un **traductor de lenguaje de señas a texto** en tiempo real. Utiliza técnicas de **visión por computadora** y **aprendizaje profundo**, empleando redes neuronales para reconocer señas a través de una cámara y convertirlas en texto.
+
+## **Características Clave**
+
+- **Reconocimiento en tiempo real**: Utilizando **OpenCV** y **TensorFlow**, el sistema identifica señas y las traduce instantáneamente a texto.
+- **Red neuronal entrenada**: Implementación de un modelo basado en **TensorFlow Object Detection API** para interpretar gestos manuales con alta precisión.
+- **Interfaz simple e intuitiva**: Captura de video en vivo donde se destacan las señas detectadas con su respectivo significado en texto.
+- **Optimización de detección**: Se utilizaron técnicas como **aumento de datos** y **entrenamiento con GPU (CUDA y CuDNN)** para mejorar la precisión del modelo.
+- **Compatibilidad con distintos fondos**: Entrenado con imágenes de distintos entornos para mejorar la adaptabilidad del sistema.
+
+## **Tecnologías Utilizadas**
+
+- **Python**: Lenguaje base para el procesamiento de imágenes y el aprendizaje automático.
+- **TensorFlow y Keras**: Para el desarrollo y entrenamiento del modelo de detección de señas.
+- **OpenCV**: Para la captura y preprocesamiento de imágenes en tiempo real.
+- **NumPy**: Para el manejo de datos y matrices.
+- **CUDA y CuDNN**: Aceleración del entrenamiento en GPUs de Nvidia.
+
+## **Desafíos y Aprendizajes**
+
+- **Cantidad de imágenes**: Se requirió un conjunto de **405 imágenes por seña**, lo que demandó un extenso preprocesamiento.
+- **Variabilidad de señas**: Diferentes ángulos y condiciones de iluminación afectaban el reconocimiento, lo que se mitigó con aumento de datos y mejor etiquetado.
+- **Optimización de rendimiento**: El entrenamiento inicial con **1000 iteraciones** tuvo baja precisión, lo que se solucionó aumentando a **10,000 iteraciones** con un modelo **SSD MobileNet** optimizado.
+
+## **Resultados**
+
+El sistema demostró **una precisión superior al 90%** en la detección de señas estáticas. Se mejoró la velocidad de inferencia, permitiendo traducciones casi instantáneas. A futuro, se busca ampliar el conjunto de datos para incluir señas dinámicas y mejorar la accesibilidad en dispositivos móviles.

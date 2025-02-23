@@ -317,7 +317,7 @@ export default function About() {
                   width={24}
                   alt={"a"}
                   //@ts-ignore
-                  src={"/images/uss.png"}
+                  src={"/images/IMG_5795.JPEG"}
                 />
               </Column>
 
