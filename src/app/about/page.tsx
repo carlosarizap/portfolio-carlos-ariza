@@ -274,7 +274,6 @@ export default function About() {
                               }}
                             >
                               <SmartImage
-                                enlarge
                                 radius="m"
                                 sizes={image.width.toString()}
                                 alt={image.alt}
